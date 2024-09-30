@@ -2,10 +2,12 @@
 import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Button from "./global/Button";
+import { StepIndicator } from "./step-indicator";
 
 export default function Hero() {
   const slides = [
@@ -30,28 +32,25 @@ export default function Hero() {
   ];
 
   return (
-    <div className="h-2/3 w-full bg-[url('/img/hero/hero.jpg')] bg-no-repeat bg-cover">
-      <div className="container mx-auto relative overflow-hidden z-50">
-        <Swiper modules={[Pagination, Navigation]} pagination={{ clickable: true }} navigation className="h-full w-full">
+    <div className="h-full w-full bg-[url('/img/hero/hero.jpg')] bg-no-repeat bg-cover">
+      <div className="h-full container mx-auto relative  ">
+        <Swiper modules={[Navigation, Autoplay]} effect="fade" autoplay={{ delay: 3000, pauseOnMouseEnter: true }}  className="h-full w-full">
           {slides.map((slide) => (
             <SwiperSlide key={slide.id}>
               <div className="relative h-full w-full">
                 {/* <img src={slide.image} alt="Videographer at work" className="absolute inset-0 w-full h-full object-cover" /> */}
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
-                <div className="absolute inset-0 flex flex-col justify-center items-start p-16 text-white">
+                <div className="absolute inset-0 flex flex-col justify-center items-start stext-white">
                   <h2 className="text-5xl font-bold mb-4">{slide.title}</h2>
                   <p className="text-xl mb-8">{slide.subtitle}</p>
-                  <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors">SEE MORE ABOUT US</button>
+                  <Button href="/contact" label="View all services" />
                 </div>
               </div>
             </SwiperSlide>
           ))}
+          <div className="absolute bottom-10 left-0 z-50">
+            <StepIndicator />
+          </div>
         </Swiper>
-        <div className="absolute bottom-8 left-16 z-10 flex space-x-2">
-          {[1, 2, 3].map((num) => (
-            <span key={num} className={`h-1 w-8 ${num === 1 ? "bg-white" : "bg-gray-500"} rounded-full`} />
-          ))}
-        </div>
       </div>
     </div>
   );

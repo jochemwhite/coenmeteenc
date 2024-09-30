@@ -68,7 +68,7 @@ export default function Header() {
         <div className="flex items-center justify-between ">
           <ul className="flex">
             {navItems.map((item) => (
-              <a key={item.name} href={item.path} className="inline-flex items-center mx-4 font-medium  relative group uppercase font-play">
+              <a key={item.name} href={item.path} className="inline-flex items-center mx-4 font-medium  relative group uppercase font-primary">
                 {item.name}
                 <span
                   className={cn(

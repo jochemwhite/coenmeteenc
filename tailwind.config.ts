@@ -4,6 +4,14 @@ const config: Config = {
   darkMode: ["class"],
   content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
+    container: {
+      center: true,
+      screens: {
+        lg: "1124px",
+        xl: "1124px",
+        "2xl": "1170px",
+      },
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -17,6 +25,8 @@ const config: Config = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+
+        "text-secondary": "#adadad",
 
         card: {
           DEFAULT: "hsl(var(--card))",
@@ -33,6 +43,9 @@ const config: Config = {
         secondary: {
           DEFAULT: "#00bfe7",
           // foreground: 'hsl(var(--secondary-foreground))'
+        },
+        "primary-background": {
+          default: "#100028",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -58,7 +71,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        play: ["var(--font-play)"],
+        primary: ["var(--font-play)"],
+        secondary: ["var(--font-josefin)"],
+
       },
     },
   },
