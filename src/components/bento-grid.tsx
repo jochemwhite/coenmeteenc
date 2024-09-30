@@ -1,12 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import { PlayCircle } from "lucide-react";
 import BentoCard from "./bento-card";
 
 export function BentoGridComponent() {
-
-
   return (
     <div className="grid grid-cols-6 grid-rows-2 gap-2 w-full  mx-auto h-[600px]">
       <div className="col-span-2 row-span-1">
