@@ -25,6 +25,7 @@ const config: Config = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        "background-secondary": "#1A083D",
 
         "text-secondary": "#adadad",
 

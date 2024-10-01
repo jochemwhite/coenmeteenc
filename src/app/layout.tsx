@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import { Inter, Play, Josefin_Sans } from "next/font/google";
 import "./globals.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import Header from "@/components/layout/header";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ModalProvider } from "@/providers/modal-provider";
+import Footer from "@/components/layout/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const play = Play({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-play" });
@@ -26,6 +30,7 @@ export default function RootLayout({
           <ModalProvider>
             <Header />
             {children}
+            <Footer />
           </ModalProvider>
         </ThemeProvider>
       </body>
