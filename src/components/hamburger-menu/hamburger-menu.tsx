@@ -36,7 +36,7 @@ export const HamburgerMenu = ({ MenuItems }: HamburgerMenuProps) => {
   return (
     <motion.nav initial={false} animate={isOpen ? "open" : "closed"} className="h-full flex xl:hidden flex-col justify-center items-end w-full z-50">
       <MenuToggle toggle={() => toggleOpen()} />
-      <motion.div className="absolute top-0 right-0 bg-background-secondary h-screen w-full" variants={sidebar}>
+      <motion.div className="absolute top-0 right-0 bg-background-secondary h-dvh w-full" variants={sidebar}>
         <Navigation MenuItems={MenuItems} toggleMenu={toggleOpen} />
 
         <div className="absolute bottom-10 left-0 w-full flex justify-center" >
