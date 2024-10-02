@@ -9,7 +9,7 @@ import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-w
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-primary-background-default flex flex-col  ">
+    <main className="min-h-screen  flex flex-col  ">
       {/* HERO */}
       <section className="h-[66.7vh] w-full py-12">
         <Hero />

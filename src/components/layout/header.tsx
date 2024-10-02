@@ -11,13 +11,13 @@ export default function Header() {
   const currentPath = usePathname();
 
   return (
-    <header className=" fixed inset-x-0 top-0 z-50 border-b-2">
+    <header className="fixed inset-x-0 top-0 z-50 border-b-2 h-24">
       <div className="container mx-auto flex justify-between py-8">
         <Link href="/" className="w-1/2 lg:w-1/4">
           <h2>LOGO HERE</h2>
         </Link>
 
-        <div className=" items-center justify-end hidden xl:flex w-full">
+        <div className="items-center justify-end hidden xl:flex w-full">
           <ul className="">
             {navItems.map((item) => (
               <a key={item.name} href={item.href} className="inline-flex items-center mx-4 font-medium  relative group uppercase font-primary">
