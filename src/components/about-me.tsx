@@ -6,7 +6,7 @@ import { Film } from "lucide-react";
 
 export default function AboutMe() {
   return (
-    <div className="container flex flex-col xl:flex-row  relative gap-4">
+    <div className="container flex flex-col xl:flex-row  relative gap-8 ">
     <div className="w-full grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-4 min-h-96 flex-grow">
       <div className="w-full h-full relative row-span-2">
         <Image src="/img/about/about-1.jpg" alt="about me" fill className="object-cover object-top" />
@@ -19,7 +19,7 @@ export default function AboutMe() {
       </div>
     </div>
     
-    <div className="space-y-12 min-h-96 w-full flex-grow overflow-y-auto">
+    <div className="space-y-12 min-h-96 w-full flex-grow ">
       <div>
         <h3 className="uppercase mb-2 font-secondary tracking-widest">About Videograph</h3>
         <h1 className="text-5xl font-bold mb-12 font-primary">About Me</h1>

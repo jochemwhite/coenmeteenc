@@ -39,7 +39,6 @@ export default function ClientReviews() {
         autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
         speed={750}
         loop
-        className="h-full w-full pt-8 pb-32"
       >
         {reviews.map((slide, i) => (
           <SwiperSlide key={i}>
