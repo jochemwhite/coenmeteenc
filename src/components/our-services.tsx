@@ -33,7 +33,7 @@ const services = [
 
 export default function OurServices() {
   return (
-    <div className="container flex flex-col space-y-8 py-[110px]">
+    <div className="container flex flex-col xl:flex-row space-y-8  xl:space-x-8">
       <div className="">
         <h3 className="text-sm uppercase mb-2 font-secondary tracking-widest">OUR SERVICES</h3>
         <h2 className="text-4xl font-bold  font-primary">WHAT WE DO?</h2>
@@ -42,13 +42,12 @@ export default function OurServices() {
           If you hire a videographer of our team you will get a video professional to make a custom video for your business and, once the project is
           over.
         </p>
+        <div className="w-2/3 md:w-1/2 xl:w-full mt-4">
+          <Button href="/contact" label="Get in touch" />
+        </div>
       </div>
 
-      <div className="w-2/3 md:w-1/2">
-        <Button href="/contact" label="Get in touch" />
-      </div>
-
-      <div className="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2  gap-8">
         {services.map((service, index) => (
           <ServiceDescription key={index} Icon={service.icon} Title={service.title} Description={service.description} />
         ))}

@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import { Inter, Play, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import type { Metadata } from "next";
+import { Inter, Play, Josefin_Sans } from "next/font/google";
 import Header from "@/components/layout/header";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ModalProvider } from "@/providers/modal-provider";

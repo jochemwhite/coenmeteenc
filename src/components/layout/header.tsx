@@ -1,75 +1,24 @@
 "use client";
-import React from "react";
-import { FaInstagram, FaTwitch, FaTwitter, FaYoutube } from "react-icons/fa";
-import { Separator } from "../ui/separator";
-import { usePathname } from "next/navigation";
+import { navItems } from "@/lib/constant";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { HamburgerMenu } from "../hamburger-menu/hamburger-menu";
-import { MenuItems } from "@/types";
+import Socials from "../global/Socials";
+import { Separator } from "../ui/separator";
 
 export default function Header() {
   const currentPath = usePathname();
 
-  const navItems: MenuItems[] = [
-    {
-      name: "Home",
-      href: "/",
-    },
-    {
-      name: "About",
-      href: "/about",
-    },
-    {
-      name: "Portfolio",
-      href: "/portfolio",
-    },
-    {
-      name: "Services",
-      href: "/services",
-    },
-    {
-      name: "Pages",
-      href: "/pages",
-    },
-    {
-      name: "Contact",
-      href: "/contact",
-    },
-  ];
-
-  const socials = [
-    {
-      name: "Instagram",
-      path: "https://www.instagram.com/coenmeteencc/",
-      icon: <FaInstagram />,
-    },
-    {
-      name: "Twitter",
-      path: "https://twitter.com/CoenMetEenC",
-      icon: <FaTwitter />,
-    },
-    {
-      name: "Youtube",
-      path: "youtube.com/CoenMetEenC",
-      icon: <FaYoutube />,
-    },
-    {
-      name: "Twitch",
-      path: "https://Twitch.tv/CoenMetEenC",
-      icon: <FaTwitch />,
-    },
-  ];
-
   return (
     <header className=" fixed inset-x-0 top-0 z-50 border-b-2">
       <div className="container mx-auto flex justify-between py-8">
-        <Link href="/">
+        <Link href="/" className="w-1/2 lg:w-1/4">
           <h2>LOGO HERE</h2>
         </Link>
 
-        <div className="flex items-center justify-between ">
-          <ul className="hidden">
+        <div className=" items-center justify-end hidden xl:flex w-full">
+          <ul className="">
             {navItems.map((item) => (
               <a key={item.name} href={item.href} className="inline-flex items-center mx-4 font-medium  relative group uppercase font-primary">
                 {item.name}
@@ -82,16 +31,11 @@ export default function Header() {
               </a>
             ))}
           </ul>
-          <HamburgerMenu MenuItems={navItems} />
-          <ul className="hidden md:flex">
           <Separator orientation="vertical" className="mr-4" />
-            {socials.map((item) => (
-              <li key={item.path} className="mr-4">
-                <a href={item.path}>{item.icon}</a>
-              </li>
-            ))}
-          </ul>
+
+          <Socials />
         </div>
+        <HamburgerMenu MenuItems={navItems} />
       </div>
     </header>
   );

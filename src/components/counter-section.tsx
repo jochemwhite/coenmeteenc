@@ -6,11 +6,11 @@ import NumberTicker from "./ui/number-ticker";
 
 export default function CounterSection() {
   return (
-    <div className="container grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center  ">
+    <div className="container grid grid-cols-1 md:grid-cols-2  2xl:grid-cols-4  w-full gap-4 place-items-center 2xl:mt-[90px]  ">
       <CounterItem className="" title="Compled Projects" count={230} Icon={BsCheck} />
-      <CounterItem className="" title="Happy Clients" count={100} Icon={BsPersonPlus} />
-      <CounterItem className="" title="Perspective clients" count={100} Icon={MdOutlineDesignServices} />
-      <CounterItem className="" title="Compled Projects" count={100} Icon={BsCheck} />
+      <CounterItem className="2xl:-mt-[180px]" title="Happy Clients" count={100} Icon={BsPersonPlus} />
+      <CounterItem className="xl:mt-32 2xl:-mt-0" title="Perspective clients" count={100} Icon={MdOutlineDesignServices} />
+      <CounterItem className="xl:mt-32 2xl:-mt-[180px]" title="Compled Projects" count={100} Icon={BsCheck} />
     </div>
   );
 }
@@ -24,19 +24,19 @@ interface Props {
 
 function CounterItem({ className, count, title, Icon }: Props) {
   return (
-    <div
-      className={cn(
-        `flex flex-col items-center justify-center  h-52 w-full md:h-[255px] md:w-[255px] text-center relative lg:rotate-45  bg-background-secondary `,
-        className
-      )}
-    >
-      <div className="flex flex-col items-center justify-center h-full lg:-rotate-45 space-y-4">
-        <Icon size={70} className="text-text-accent" />
-        <div className="flex flex-col items-center">
-          <NumberTicker value={count} className="text-5xl font-bold text-primary" />
-          <span className="text-primary">{title}</span>
+      <div
+        className={cn(
+          `flex flex-col items-center justify-center  h-52 w-full md:h-[255px] md:w-[255px] text-center relative xl:rotate-45  bg-background-secondary `,
+          className
+        )}
+      >
+        <div className="flex flex-col items-center justify-center h-full xl:-rotate-45 space-y-4">
+          <Icon size={70} className="text-text-accent" />
+          <div className="flex flex-col items-center">
+            <NumberTicker value={count} className="text-5xl font-bold text-primary" />
+            <span className="text-primary">{title}</span>
+          </div>
         </div>
       </div>
-    </div>
   );
 }

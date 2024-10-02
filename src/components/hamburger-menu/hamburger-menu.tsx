@@ -2,6 +2,7 @@ import { motion, useCycle } from "framer-motion";
 import { MenuToggle } from "./menu-toggle";
 import { Navigation } from "./navigation";
 import { MenuItems } from "@/types";
+import Socials from "../global/Socials";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -33,10 +34,14 @@ export const HamburgerMenu = ({ MenuItems }: HamburgerMenuProps) => {
 
 
   return (
-    <motion.nav initial={false} animate={isOpen ? "open" : "closed"} className="h-full flex lg:hidden flex-col justify-center items-end w-full">
+    <motion.nav initial={false} animate={isOpen ? "open" : "closed"} className="h-full flex xl:hidden flex-col justify-center items-end w-full z-50">
       <MenuToggle toggle={() => toggleOpen()} />
       <motion.div className="absolute top-0 right-0 bg-background-secondary h-screen w-full" variants={sidebar}>
         <Navigation MenuItems={MenuItems} toggleMenu={toggleOpen} />
+
+        <div className="absolute bottom-10 left-0 w-full flex justify-center" >
+          <Socials />
+        </div>
       </motion.div>
     </motion.nav>
   );

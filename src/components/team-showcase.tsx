@@ -1,36 +1,9 @@
-"use client";
-
-import { useState } from "react";
+import { team_members } from "@/lib/constant";
 import Button from "./global/Button";
-import { Separator } from "./ui/separator";
-import { AnimatePresence, motion } from "framer-motion";
-import { Twitter, Facebook, Instagram } from "lucide-react";
 import { HoverCardWithBg } from "./hover-card-with-bg";
+import { Separator } from "./ui/separator";
 
 export function TeamShowcase() {
-  const team_members = [
-    {
-      name: "Coen",
-      role: "CEO",
-      image: "/img/team/team-1.jpg",
-    },
-    {
-      name: "Coen",
-      role: "CEO",
-      image: "/img/team/team-1.jpg",
-    },
-    {
-      name: "Coen",
-      role: "CEO",
-      image: "/img/team/team-1.jpg",
-    },
-    {
-      name: "Coen",
-      role: "CEO",
-      image: "/img/team/team-1.jpg",
-    },
-  ];
-
   return (
     <div className="relative w-full  overflow-hidden bg-[url('/img/team-bg.jpg')] bg-no-repeat bg-cover">
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-16 text-white">
@@ -39,20 +12,14 @@ export function TeamShowcase() {
 
         <Separator className="mt-8 mb-12 bg-secondary h-2 w-32" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 place-items-center space-y-6  relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 place-items-center gap-4 relative">
           {team_members.map((member, i) => (
-            <div
-              key={i}
-              className={`relative`}
-              // style={{
-              //   marginTop: `-${i * 60}px`,
-              // }}
-            >
+            <div key={i} className={`relative`}>
               <HoverCardWithBg image={member.image} name={member.name} role={member.role} />
             </div>
           ))}
         </div>
-        <div className="lg:absolute w-full flex justify-end mt-8 bottom-0 grid-cols-4 items-end">
+        <div className=" w-full flex justify-center xl:justify-end mt-8 bottom-0 grid-cols-4 items-end">
           <Button label="Meet The Team" href="/team" />
         </div>
       </div>
