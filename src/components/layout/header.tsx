@@ -4,34 +4,37 @@ import { FaInstagram, FaTwitch, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Separator } from "../ui/separator";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { HamburgerMenu } from "../hamburger-menu/hamburger-menu";
+import { MenuItems } from "@/types";
 
 export default function Header() {
   const currentPath = usePathname();
 
-  const navItems = [
+  const navItems: MenuItems[] = [
     {
       name: "Home",
-      path: "/",
+      href: "/",
     },
     {
       name: "About",
-      path: "/about",
+      href: "/about",
     },
     {
       name: "Portfolio",
-      path: "/portfolio",
+      href: "/portfolio",
     },
     {
       name: "Services",
-      path: "/services",
+      href: "/services",
     },
     {
       name: "Pages",
-      path: "/pages",
+      href: "/pages",
     },
     {
       name: "Contact",
-      path: "/contact",
+      href: "/contact",
     },
   ];
 
@@ -61,26 +64,27 @@ export default function Header() {
   return (
     <header className=" fixed inset-x-0 top-0 z-50 border-b-2">
       <div className="container mx-auto flex justify-between py-8">
-        <div>
+        <Link href="/">
           <h2>LOGO HERE</h2>
-        </div>
+        </Link>
 
         <div className="flex items-center justify-between ">
-          <ul className="flex">
+          <ul className="hidden">
             {navItems.map((item) => (
-              <a key={item.name} href={item.path} className="inline-flex items-center mx-4 font-medium  relative group uppercase font-primary">
+              <a key={item.name} href={item.href} className="inline-flex items-center mx-4 font-medium  relative group uppercase font-primary">
                 {item.name}
                 <span
                   className={cn(
                     "absolute bottom-0 left-0 top-8 w-full h-0.5 bg-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out",
-                    currentPath === item.path ? "scale-x-100" : ""
+                    currentPath === item.href ? "scale-x-100" : ""
                   )}
                 />
               </a>
             ))}
           </ul>
+          <HamburgerMenu MenuItems={navItems} />
+          <ul className="hidden md:flex">
           <Separator orientation="vertical" className="mr-4" />
-          <ul className="flex">
             {socials.map((item) => (
               <li key={item.path} className="mr-4">
                 <a href={item.path}>{item.icon}</a>

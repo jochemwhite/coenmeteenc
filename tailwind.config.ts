@@ -11,6 +11,13 @@ const config: Config = {
         xl: "1124px",
         "2xl": "1170px",
       },
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      }
     },
     extend: {
       backgroundImage: {
@@ -26,8 +33,8 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         "background-secondary": "#1A083D",
-
         "text-secondary": "#adadad",
+        "text-accent": "#00C0E8",
 
         card: {
           DEFAULT: "hsl(var(--card))",

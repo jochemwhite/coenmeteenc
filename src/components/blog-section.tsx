@@ -2,11 +2,14 @@
 import { Separator } from "@radix-ui/react-separator";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import useWindowSize from "@/hooks/useWindowSize";
 
 export default function BlogSection() {
+  const [slideCount, setSlideCount] = useState(1);
+  const { width } = useWindowSize();
   const mockData = [
     {
       title: "The Rise of Artificial Intelligence in Healthcare",
@@ -60,6 +63,18 @@ export default function BlogSection() {
     },
   ];
 
+  useEffect(() => {
+    if (width < 640) {
+      setSlideCount(1);
+    } else if (width < 1024) {
+      setSlideCount(2);
+    } else {
+      setSlideCount(3);
+    }
+  }, [width]);
+
+
+
   return (
     <div className="container flex justify-center flex-col items-center">
       <div className="text-center flex justify-center flex-col items-center">
@@ -68,7 +83,7 @@ export default function BlogSection() {
         <Separator className="bg-secondary h-2 w-20" />
       </div>
 
-      <Swiper modules={[Navigation, Autoplay]} slidesPerView={3} effect="fade" autoplay={{ delay: 3000, pauseOnMouseEnter: true }} speed={750} loop className="h-full w-full">
+      <Swiper modules={[Navigation, Autoplay]} slidesPerView={slideCount} effect="fade" autoplay={{ delay: 3000, pauseOnMouseEnter: true }} speed={750} loop className="h-full w-full">
         {mockData.map((slide, i) => (
           <SwiperSlide key={i}>
             <BlogCard title={slide.title} content={slide.content} date={slide.date} />

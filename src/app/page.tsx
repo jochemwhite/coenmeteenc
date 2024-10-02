@@ -9,21 +9,22 @@ import { TeamShowcase } from "@/components/team-showcase";
 export default function Home() {
   return (
     <main className="min-h-screen bg-primary-background-default flex flex-col ">
+      {/* HERO */}
       <section className="h-[66.7vh] w-full ">
         <Hero />
       </section>
-      {/* <BackgroundBeamsWithCollision className="relative  flex flex-col w-full"> */}
-      <section className="flex-grow">
+      {/* OUR SERVICES */}
+      <section>
         <OurServices />
       </section>
       <section className="w-full">
+        {/* BENTO GRID  */}
         <BentoGridComponent />
       </section>
       {/* Counter Section */}
-      <section className="relative mt-[185px] py-16">
+      <section className="relative  py-16">
         <CounterSection />
       </section>
-      {/* </BackgroundBeamsWithCollision> */}
 
       <section className="w-full bg-primary-background-default py-24">
         <TeamShowcase />

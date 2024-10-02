@@ -38,8 +38,8 @@ export default function Hero() {
               <div className="relative h-full w-full">
                 {/* <img src={slide.image} alt="Videographer at work" className="absolute inset-0 w-full h-full object-cover" /> */}
                 <div className="absolute inset-0 flex flex-col justify-center items-start stext-white">
-                  <h2 className="text-5xl font-bold mb-4">{slide.title}</h2>
-                  <p className="text-xl mb-8">{slide.subtitle}</p>
+                  <h2 className="text-3xl md:text-5xl font-bold mb-4">{slide.title}</h2>
+                  <p className="md:text-xl mb-8">{slide.subtitle}</p>
                   <Button href="/contact" label="View all services" />
                 </div>
               </div>

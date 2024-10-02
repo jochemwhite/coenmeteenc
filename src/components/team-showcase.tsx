@@ -39,21 +39,21 @@ export function TeamShowcase() {
 
         <Separator className="mt-8 mb-12 bg-secondary h-2 w-32" />
 
-        <div className="grid grid-cols-2 md:grid-cols-4 mt-32 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 place-items-center space-y-6  relative">
           {team_members.map((member, i) => (
             <div
               key={i}
               className={`relative`}
-              style={{
-                marginTop: `-${i * 60}px`,
-              }}
+              // style={{
+              //   marginTop: `-${i * 60}px`,
+              // }}
             >
               <HoverCardWithBg image={member.image} name={member.name} role={member.role} />
             </div>
           ))}
-          <div className="absolute w-full flex justify-end mt-8 bottom-0">
-            <Button label="Meet The Team" href="/team" />
-          </div>
+        </div>
+        <div className="lg:absolute w-full flex justify-end mt-8 bottom-0 grid-cols-4 items-end">
+          <Button label="Meet The Team" href="/team" />
         </div>
       </div>
     </div>
@@ -65,4 +65,3 @@ interface SocialCardProps {
   role: string;
   image: string;
 }
-
