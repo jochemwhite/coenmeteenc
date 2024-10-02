@@ -92,7 +92,7 @@ const Modal: React.FC<ModalProps> = ({ children, closeModal, isOpen }) => {
 
           <motion.div
             className={cn(
-              "md:max-w-[40%] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden p-4"
+              "w-full md:w-1/2 dark:bg-neutral-950  border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden p-4"
             )}
             initial={{ opacity: 0, scale: 0.5, rotateX: 40, y: 40 }}
             animate={{ opacity: 1, scale: 1, rotateX: 0, y: 0 }}
@@ -100,7 +100,7 @@ const Modal: React.FC<ModalProps> = ({ children, closeModal, isOpen }) => {
             transition={{ type: "tween", stiffness: 260, damping: 15 }}
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
           >
-            <button onClick={closeModal} className="absolute w-full left-0 top-0 text-2xl" aria-label="Close modal">
+            <button onClick={closeModal} className="absolute  right-0 top-0 text-2xl" aria-label="Close modal">
               <MdClose />
             </button>
             {children}
