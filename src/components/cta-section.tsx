@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-export default function CtaSection() {
+export default function CallToAction() {
   return (
     <div className="relative overflow-hidden bg-[url('/img/calltos-bg.jpg')] bg-no-repeat bg-cover">
       <div className="container mx-auto px-6 py-20 relative z-10 flex flex-col justify-center h-full text-white">

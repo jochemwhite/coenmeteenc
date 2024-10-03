@@ -8,6 +8,7 @@ import Header from "@/components/layout/header";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ModalProvider } from "@/providers/modal-provider";
 import Footer from "@/components/layout/footer";
+import { Toaster, toast } from 'sonner'
 
 const inter = Inter({ subsets: ["latin"] });
 const play = Play({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-play" });
@@ -32,6 +33,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </ModalProvider>
+          <Toaster position="bottom-right"  />
         </ThemeProvider>
       </body>
     </html>

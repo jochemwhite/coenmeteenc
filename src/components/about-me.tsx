@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Separator } from "./ui/separator";
-import ServiceDescription from "./service-description";
+import ServiceDescription from "./cards/service-card";
 import { Film } from "lucide-react";
 
 export default function AboutMe() {

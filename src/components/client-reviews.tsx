@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import useWindowSize from "@/hooks/useWindowSize";
 import { reviews } from "@/lib/constant";
-import ClientReviewCard from "./client-review-card";
 import Pagination from "./pagination";
+import ClientReviewCard from "./cards/client-review-card";
 
 export default function ClientReviews() {
   const [slideCount, setSlideCount] = useState(1);

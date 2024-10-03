@@ -1,5 +1,6 @@
 import { MenuItems } from "@/types";
 import { FaInstagram, FaTwitch, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Film, LucideProps, Pencil, Share2, Video } from "lucide-react";
 
 export const navItems: MenuItems[] = [
   {
@@ -18,10 +19,7 @@ export const navItems: MenuItems[] = [
     name: "Services",
     href: "/services",
   },
-  {
-    name: "Pages",
-    href: "/pages",
-  },
+
   {
     name: "Contact",
     href: "/contact",
@@ -104,5 +102,77 @@ export const reviews = [
     role: "Data Analyst",
     review: "The data visualization components are top-notch. They've made presenting complex information much easier.",
     img: "/api/placeholder/150/150",
+  },
+];
+
+export const services = [
+  {
+    icon: Film,
+    title: "Motion graphics",
+    description:
+      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
+  },
+  {
+    icon: Pencil,
+    title: "Scriptwriting and editing",
+    description:
+      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
+  },
+  {
+    icon: Share2,
+    title: "Video distribution",
+    description:
+      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
+  },
+  {
+    icon: Video,
+    title: "Video hosting",
+    description:
+      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
+  },
+  {
+    icon: Video,
+    title: "Video hosting",
+    description:
+      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
+  },
+  {
+    icon: Video,
+    title: "Video hosting",
+    description:
+      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
+  },
+];
+
+export const brands = [
+  {
+    name: "Sony",
+    image: "/img/logo/logo-1.png",
+    href: "https://sony.com",
+  },
+  {
+    name: "Sony",
+    image: "/img/logo/logo-2.png",
+    href: "https://sony.com",
+  },
+  {
+    name: "Sony",
+    image: "/img/logo/logo-3.png",
+    href: "https://sony.com",
+  },
+  {
+    name: "Sony",
+    image: "/img/logo/logo-4.png",
+    href: "https://sony.com",
+  },
+  {
+    name: "Sony",
+    image: "/img/logo/logo-5.png",
+    href: "https://sony.com",
+  },
+  {
+    name: "Sony",
+    image: "/img/logo/logo-6.png",
+    href: "https://sony.com",
   },
 ];

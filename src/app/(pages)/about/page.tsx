@@ -18,11 +18,9 @@ export default function page() {
 
       {/* services */}
       <section className="relative ">
-        {/* <BackgroundBeamsWithCollision> */}
-          <div className="py-24 w-full">
-            <CounterSection />
-          </div>
-        {/* </BackgroundBeamsWithCollision> */}
+        <div className="py-24 w-full">
+          <CounterSection />
+        </div>
       </section>
 
       {/* team */}

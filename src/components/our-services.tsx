@@ -1,36 +1,12 @@
-import { Film, LucideProps, Pencil, Share2, Video } from "lucide-react";
+
 
 import React from "react";
 import { Separator } from "./ui/separator";
 import Button from "./global/Button";
-import ServiceDescription from "./service-description";
+import ServiceCard from "./cards/service-card";
+import { services } from "@/lib/constant";
 
-const services = [
-  {
-    icon: Film,
-    title: "Motion graphics",
-    description:
-      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
-  },
-  {
-    icon: Pencil,
-    title: "Scriptwriting and editing",
-    description:
-      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
-  },
-  {
-    icon: Share2,
-    title: "Video distribution",
-    description:
-      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
-  },
-  {
-    icon: Video,
-    title: "Video hosting",
-    description:
-      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
-  },
-];
+
 
 export default function OurServices() {
   return (
@@ -49,8 +25,8 @@ export default function OurServices() {
       </div>
 
       <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2  gap-8">
-        {services.map((service, index) => (
-          <ServiceDescription key={index} Icon={service.icon} Title={service.title} Description={service.description} />
+        {services.slice(0, 4).map((service, index) => (
+          <ServiceCard key={index} Icon={service.icon} Title={service.title} Description={service.description} />
         ))}
       </div>
     </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import BentoCard from "./bento-card";
+import BentoCard from "./cards/bento-card";
 
 export function BentoGridComponent() {
   return (

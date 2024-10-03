@@ -6,7 +6,7 @@ interface ServiceProps {
   Description: string;
 }
 
-export default function ServiceDescription({ Icon, Title, Description }: ServiceProps) {
+export default function ServiceCard({ Icon, Title, Description }: ServiceProps) {
   return (
     <div className="flex flex-col ">
       <div className="flex-shrink-0">
