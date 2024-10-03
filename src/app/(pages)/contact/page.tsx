@@ -6,9 +6,9 @@ import React from "react";
 export default function Contact() {
   return (
     <>
-      <section>
+      {/* <section>
         <ContactInformation />
-      </section>
+      </section> */}
 
       <section className="container pb-12 ">
         <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 ">

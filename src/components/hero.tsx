@@ -11,36 +11,38 @@ export default function Hero() {
   const slides = [
     {
       id: 1,
-      image: "/placeholder.svg?height=600&width=1200",
-      title: "VIDEOGRAPHER'S PORTFOLIO",
-      subtitle: "FOR WEBSITE AND VIDEO EDITING",
+      title: "Video editing",
+      subtitle: "Making your stories visible",
+      button_label: "Contact me",
+      button_link: "/contact",
     },
     {
       id: 2,
-      image: "/placeholder.svg?height=600&width=1200",
-      title: "JOHN STOP ME TE LATEN SCHRIKKEN",
-      subtitle: "FOR WEBSITE AND VIDEO EDITING",
+      title: "Camera work",
+      subtitle: "See my recent work",
+      button_label: "Recent work",
+      button_link: "/services",
     },
     {
       id: 3,
-      image: "/placeholder.svg?height=600&width=1200",
-      title: "VERDOME",
-      subtitle: "FOR WEBSITE AND VIDEO EDITING",
+      title: "2D Animation",
+      subtitle: "Making your stories visible",
+      button_label: "Recent animations",
+      button_link: "/services",
     },
   ];
 
   return (
     <div className="h-full w-full bg-[url('/img/hero/hero.jpg')] bg-no-repeat bg-cover">
       <div className="h-full container mx-auto relative  ">
-        <Swiper modules={[Navigation, Autoplay]} effect="fade" autoplay={{ delay: 3000, pauseOnMouseEnter: true }}  className="h-full w-full">
+        <Swiper modules={[Navigation, Autoplay]} effect="fade" autoplay={{ delay: 3000, pauseOnMouseEnter: true }} className="h-full w-full">
           {slides.map((slide) => (
             <SwiperSlide key={slide.id}>
               <div className="relative h-full w-full">
-                {/* <img src={slide.image} alt="Videographer at work" className="absolute inset-0 w-full h-full object-cover" /> */}
                 <div className="absolute inset-0 flex flex-col justify-center items-start stext-white">
                   <h2 className="text-3xl md:text-5xl font-bold mb-4">{slide.title}</h2>
                   <p className="md:text-xl mb-8">{slide.subtitle}</p>
-                  <Button href="/contact" label="View all services" />
+                  <Button href={slide.button_link} label={slide.button_label} />
                 </div>
               </div>
             </SwiperSlide>

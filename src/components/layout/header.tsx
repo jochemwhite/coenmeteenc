@@ -7,6 +7,7 @@ import { HamburgerMenu } from "../hamburger-menu/hamburger-menu";
 import Socials from "../global/Socials";
 import { Separator } from "../ui/separator";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Header() {
   const [fixer, setfixer] = useState<boolean>(false);
@@ -27,9 +28,9 @@ export default function Header() {
         "bg-background-secondary": fixer,
       })}
     >
-      <div className="container mx-auto flex justify-between py-8">
+      <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="w-1/2 lg:w-1/4">
-          <h2>LOGO HERE</h2>
+          <Image src="/img/logo.png" alt="logo" width={100} height={100} />
         </Link>
 
         <div className="items-center justify-end hidden xl:flex w-full">
@@ -46,7 +47,7 @@ export default function Header() {
               </a>
             ))}
           </ul>
-          <Separator className="mx-4" orientation="vertical" />
+          <Separator className="mx-4 w-[1px] h-4 " orientation="vertical" />
           <Socials />
         </div>
         <HamburgerMenu MenuItems={navItems} />

@@ -1,10 +1,8 @@
 import { BentoGridComponent } from "@/components/bento-grid";
-import BlogSection from "@/components/blog-section";
 import CounterSection from "@/components/counter-section";
 import CtaSection from "@/components/cta-section";
 import Hero from "@/components/hero";
 import OurServices from "@/components/our-services";
-import { TeamShowcase } from "@/components/team-showcase";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 export default function Home() {
@@ -31,17 +29,17 @@ export default function Home() {
         </BackgroundBeamsWithCollision>
       </section>
 
-      <section className="w-full bg-primary-background-default pb-12">
+      {/* <section className="w-full bg-primary-background-default pb-12">
         <TeamShowcase />
-      </section>
+      </section> */}
 
       {/* BLOG */}
-      <section className="py-12">
+      {/* <section className="py-12">
         <BlogSection />
-      </section>
+      </section> */}
 
       {/* Call to Action */}
-      <section className="pt-12">
+      <section>
         <CtaSection />
       </section>
     </main>

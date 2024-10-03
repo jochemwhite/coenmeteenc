@@ -25,9 +25,9 @@ export default function page() {
 
       {/* team */}
 
-      <section>
+      {/* <section>
         <TeamShowcase />
-      </section>
+      </section> */}
     </>
   );
 }
