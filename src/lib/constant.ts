@@ -1,4 +1,4 @@
-import { MenuItems } from "@/types";
+import { MenuItems, PortfolioProject } from "@/types";
 import { FaInstagram, FaTwitch, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Film, LucideProps, Pencil, Share2, Video } from "lucide-react";
 
@@ -175,4 +175,90 @@ export const brands = [
     image: "/img/logo/logo-6.png",
     href: "https://sony.com",
   },
+];
+
+
+export const portfolioItems: PortfolioProject[] = [
+  {
+    image: "/img/portfolio/portfolio-1.jpg",
+    name: "Portfolio 1",
+    categories: ["2d-animation"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare auctor magna nec pulvinar. Mauris sed quam sem. Mauris interdum purus non magna consectetur ornare. Phasellus sed varius libero. Proin libero nunc, eleifend non nunc at, sodales condimentum dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi faucibus urna vitae nisl porta aliquet.",
+    slug: "portfolio-1",
+    youtube_id: "ObBXropudK4",
+  },
+  {
+    image: "/img/portfolio/portfolio-1.jpg",
+    name: "Portfolio 2",
+    categories: ["camera-work", "video-editing"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare auctor magna nec pulvinar. Mauris sed quam sem. Mauris interdum purus non magna consectetur ornare. Phasellus sed varius libero. Proin libero nunc, eleifend non nunc at, sodales condimentum dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi faucibus urna vitae nisl porta aliquet.",
+    slug: "portfolio-2",
+    youtube_id: "ObBXropudK4",
+  },
+  {
+    image: "/img/portfolio/portfolio-1.jpg",
+    name: "Portfolio 3",
+    categories: ["camera-work", "video-editing"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare auctor magna nec pulvinar. Mauris sed quam sem. Mauris interdum purus non magna consectetur ornare. Phasellus sed varius libero. Proin libero nunc, eleifend non nunc at, sodales condimentum dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi faucibus urna vitae nisl porta aliquet.",
+    slug: "portfolio-2",
+    youtube_id: "ObBXropudK4",
+  },
+  {
+    image: "/img/portfolio/portfolio-1.jpg",
+    name: "Portfolio 4",
+    categories: ["camera-work", "video-editing"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare auctor magna nec pulvinar. Mauris sed quam sem. Mauris interdum purus non magna consectetur ornare. Phasellus sed varius libero. Proin libero nunc, eleifend non nunc at, sodales condimentum dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi faucibus urna vitae nisl porta aliquet.",
+    slug: "portfolio-4",
+    youtube_id: "ObBXropudK4",
+  },
+  {
+    image: "/img/portfolio/portfolio-1.jpg",
+    name: "Portfolio 5",
+    categories: ["camera-work", "video-editing"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare auctor magna nec pulvinar. Mauris sed quam sem. Mauris interdum purus non magna consectetur ornare. Phasellus sed varius libero. Proin libero nunc, eleifend non nunc at, sodales condimentum dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi faucibus urna vitae nisl porta aliquet.",
+    slug: "portfolio-5",
+    youtube_id: "ObBXropudK4",
+  },
+  {
+    image: "/img/portfolio/portfolio-1.jpg",
+    name: "Portfolio 6",
+    categories: ["2d-animation"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare auctor magna nec pulvinar. Mauris sed quam sem. Mauris interdum purus non magna consectetur ornare. Phasellus sed varius libero. Proin libero nunc, eleifend non nunc at, sodales condimentum dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi faucibus urna vitae nisl porta aliquet.",
+    slug: "portfolio-6",
+    youtube_id: "ObBXropudK4",
+  },
+  {
+    image: "/img/portfolio/portfolio-1.jpg",
+    name: "Portfolio 7",
+    categories: ["2d-animation"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare auctor magna nec pulvinar. Mauris sed quam sem. Mauris interdum purus non magna consectetur ornare. Phasellus sed varius libero. Proin libero nunc, eleifend non nunc at, sodales condimentum dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi faucibus urna vitae nisl porta aliquet.",
+    slug: "portfolio-7",
+    youtube_id: "ObBXropudK4",
+  },
+  {
+    image: "/img/portfolio/portfolio-1.jpg",
+    name: "Portfolio 8",
+    categories: ["camera-work", "video-editing"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare auctor magna nec pulvinar. Mauris sed quam sem. Mauris interdum purus non magna consectetur ornare. Phasellus sed varius libero. Proin libero nunc, eleifend non nunc at, sodales condimentum dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi faucibus urna vitae nisl porta aliquet.",
+    slug: "portfolio-8",
+    youtube_id: "ObBXropudK4",
+  },
+  {
+    image: "/img/portfolio/portfolio-1.jpg",
+    name: "Portfolio 9",
+    categories: ["camera-work", "video-editing"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare auctor magna nec pulvinar. Mauris sed quam sem. Mauris interdum purus non magna consectetur ornare. Phasellus sed varius libero. Proin libero nunc, eleifend non nunc at, sodales condimentum dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi faucibus urna vitae nisl porta aliquet.",
+    slug: "portfolio-9",
+    youtube_id: "ObBXropudK4",
+  },
+
 ];

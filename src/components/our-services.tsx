@@ -12,8 +12,8 @@ export default function OurServices() {
   return (
     <div className="container flex flex-col xl:flex-row space-y-8  xl:space-x-8">
       <div className="">
-        <h3 className="text-sm uppercase mb-2 font-secondary tracking-widest">OUR SERVICES</h3>
-        <h2 className="text-4xl font-bold  font-primary">WHAT WE DO?</h2>
+        <h3 className="text-sm uppercase mb-2 font-secondary tracking-widest">MY SERVICES</h3>
+        <h2 className="text-4xl font-bold  font-primary">WHAT I DO?</h2>
         <Separator className="mt-8 mb-12 bg-secondary h-2 w-32" />
         <p className="max-w-2xl font-secondary text-text-secondary">
           If you hire a videographer of our team you will get a video professional to make a custom video for your business and, once the project is
