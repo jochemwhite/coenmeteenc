@@ -108,40 +108,30 @@ export const reviews = [
 export const services = [
   {
     icon: Film,
-    title: "Motion graphics",
+    title: "Camera Work",
     description:
-      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
+      "From concept development to final editing, I am skilled in creating videos that are both visually appealing and content-rich. I have experience working with various software, such as Adobe Premiere Pro and After Effects.",
   },
   {
     icon: Pencil,
-    title: "Scriptwriting and editing",
+    title: "Effects Animation",
     description:
-      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
+      "With a creative approach, I bring ideas to life through 2D animation. Whether it's short clips for social media or educational animations, I enjoy the process of visualizing complex concepts in a simple and attractive way.",
+  
   },
   {
     icon: Share2,
-    title: "Video distribution",
+    title: "Video Editing",
     description:
       "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
   },
   {
     icon: Video,
-    title: "Video hosting",
+    title: "Story Animation",
     description:
       "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
   },
-  {
-    icon: Video,
-    title: "Video hosting",
-    description:
-      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
-  },
-  {
-    icon: Video,
-    title: "Video hosting",
-    description:
-      "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches.",
-  },
+
 ];
 
 export const brands = [

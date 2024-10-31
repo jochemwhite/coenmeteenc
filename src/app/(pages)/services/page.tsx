@@ -8,7 +8,7 @@ export default function Services() {
     <>
       {/* Services */}
       <section>
-        <div className="container col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-8">
+        <div className="container col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2  gap-8">
           {services.map((service, index) => (
             <ServiceCard key={index} Icon={service.icon} Title={service.title} Description={service.description} />
           ))}
